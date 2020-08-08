@@ -14,3 +14,13 @@ let script2 = document.createElement('script');
 script2.text = 'function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"",includedLanguages: "zh-TW",layout: google.translate.TranslateElement.InlineLayout.SIMPLE},"google_translate_element");}';
 script2.setAttribute('type', 'text/javascript');
 body.appendChild(script2);
+
+let css = '#\\:2\\.container { top: auto; bottom: 0px; } body { top: auto !important; margin-bottom: 40px; }',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+head.appendChild(style);
+
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+body.style.top = "auto"
